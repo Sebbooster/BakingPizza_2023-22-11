@@ -4,30 +4,22 @@
 //Global Variables
 int appWidth, appHeight, SDimension;
 //
-
+Boolean OS_On=false;
 //
 void setup() {
-fullScreen();
-appWidth = displayWidth; //fullscreen
-appHeight = displayHeight; //fullscreen
+size(1000, 1000);
 //
-//Display Algorithm
-SDimension = (appWidth >= appHeight ) ? appHeight : appWidth; //ternary operator
-  //Purpose: CANVAS fits in monitor & dimension size is known
-  //Output #1: Console confirms CANVAS will fit in the monitor
-  //Output #2: Console confirms display orientation (landscape-square or portrait)
-  //Output #3: Console confirms dimension sizes (smaller and larger)
-  //Output #4: if error with any of above, program will exit or be broken
-  //           Hint: "Please rotate your device."
-// End ternary operator.
+DisplayAlgorithm();
 } //End setup
 //
 void draw() {
-
+if( OS_On == true) {
+background(255);
+};
 } //End draw
 //
 void mousePressed() {
-
+if(OS_On == false) OS_On = true;
 } //End mousePressed
 //
 void keyPressed() {
