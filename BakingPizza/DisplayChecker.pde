@@ -6,7 +6,7 @@ appHeight = displayHeight; //fullscreen
 SDimension = (appWidth >= appHeight ) ? appHeight : appWidth; //ternary operator
   //Purpose: CANVAS fits in monitor & dimension size is known
   //Output #1: Console confirms CANVAS will fit in the monitor
-  if (width < displayWidth && height < displayHeight) {
+  if (width <= displayWidth && height <= displayHeight) {
     
   }
   //Output #2: Console confirms display orientation (landscape-square or portrait)
@@ -20,7 +20,7 @@ SDimension = (appWidth >= appHeight ) ? appHeight : appWidth; //ternary operator
   //Optional: "Are you sure?" exit screen
   }
   //Output #4: if error with any of above, program will exit or be broken
-    if (width < displayWidth && height < displayHeight) {
+    if (width <= displayWidth && height <= displayHeight) {
   println("CANVAS fits in DISPLAY GEOMETRY");
   println("Display Dimension:", "width: "+width, "height: "+height, "Display Width: "+displayWidth, "Display Height: "+displayHeight);
   } else {
