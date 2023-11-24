@@ -39,7 +39,7 @@ background(255);
 } //End draw
 //
 void mousePressed() {
-if(OS_On == false) OS_On = true;
+if(mouseX>ssSpaceBarX && mouseX<ssSpaceBarX+ssSpaceBarW && mouseY>ssSpaceBarY && mouseY<ssSpaceBarY+ssSpaceBarH) OS_On = true;
 } //End mousePressed
 //
 void keyPressed() {
