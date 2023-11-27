@@ -5,45 +5,51 @@
 int appWidth, appHeight, SDimension;
 //
 float ssSpaceBarX, ssSpaceBarY, ssSpaceBarW, ssSpaceBarH;
+float BackgroundX, BackgroundY, BackgroundW, BackgroundH;
 //
 Boolean OS_On=false;
+Boolean programStart=false;
 //
 PFont InkFree;
+//
+color resetcolor=#FFFFFF;
 //
 void setup() {
 fullScreen();
 //
+//groupcode
 DisplayAlgorithm();
-//
 textSetup();
-//
-//Population
-float centerX= appWidth*1/2, centerY= appHeight*1/2;
-ssSpaceBarW = appWidth*1/2;
-ssSpaceBarH = appHeight*1/10;
-ssSpaceBarX = centerX - ssSpaceBarW*1/2;
-ssSpaceBarY = centerY - ssSpaceBarH*1/2;
+Population();
+loadImagesSetup();
 //
 //DIVs
+noFill();
+noStroke();
 rect(ssSpaceBarX, ssSpaceBarY, ssSpaceBarW, ssSpaceBarH);
+
 //
-if (OS_On == false) {
-ssText();
-}
 } //End setup
 //
 void draw() {
 if( OS_On == true) {
-background(255);
+splashScreen();
 };
+if(programStart == true) {
+homeScreen();
+}
+if(OS_On==true && programStart==false) splashScreen();
+if(OS_On==true && programStart==true) homeScreen();
 } //End draw
 //
 void mousePressed() {
-if(mouseX>ssSpaceBarX && mouseX<ssSpaceBarX+ssSpaceBarW && mouseY>ssSpaceBarY && mouseY<ssSpaceBarY+ssSpaceBarH) OS_On = true;
+if(OS_On==false) OS_On=true; //click start
 } //End mousePressed
 //
 void keyPressed() {
-
+if(key==' ') programStart=true; // spacebar start
+if(key==CODED || keyCode==BACKSPACE) exit();
+if(key=='Q' || key=='q') exit();
 } //End keyPressed
 //
 //end MAIN Program

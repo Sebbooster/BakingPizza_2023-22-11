@@ -1,10 +1,11 @@
 //Global Variables
 color green=#40C119;
 color ResetInkColor=#FFFFFF;
+color white=#FFFFFF;
 //
 int size;
 //
-String click = "Click or else Daniel Vimar will kill you at 3 AM";
+String click = "Press SPACEBAR to continue.";
 //
 void textSetup() {
 InkFree = createFont("Ink Free", 55);

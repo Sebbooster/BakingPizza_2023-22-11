@@ -1,5 +1,13 @@
 void splashScreen () {
-/*Note: any visually-based coding running in Setup() controlled by MouseClick
--background image
-*/
+  /* Note: any visually-based code running in SetUp() controlled by MouseClick
+   - background image
+   */
+  //
+  /* Any other code for Splash Screen goes below
+   - Start Button
+   - Any other instructions
+   - Splash Screen Details
+   */
+   background(255);
+   ssText();
 }//END splashScreen
