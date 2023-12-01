@@ -6,6 +6,7 @@ int appWidth, appHeight, SDimension;
 //
 float ssSpaceBarX, ssSpaceBarY, ssSpaceBarW, ssSpaceBarH;
 float BackgroundX, BackgroundY, BackgroundW, BackgroundH;
+float HTxtBX, HTxtBY, HTxtBW, HTxtBH;
 //
 Boolean OS_On=false;
 Boolean programStart=false;

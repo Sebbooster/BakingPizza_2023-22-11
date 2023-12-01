@@ -2,6 +2,7 @@
 color green=#40C119;
 color ResetInkColor=#FFFFFF;
 color white=#FFFFFF;
+color darkink=#000000;
 //
 int size;
 //
@@ -17,12 +18,22 @@ void precodeText() {
 //
 void ssText() {
   precodeText();
-  fill(green); //ink
+  fill(darkink); //ink
   size = 50;
   textFont(InkFree, size);
   text(click, ssSpaceBarX, ssSpaceBarY, ssSpaceBarW, ssSpaceBarH);
   //noFill();
   fill(ResetInkColor);
 }//End ssText
+//
+void homeTxt() {
+  precodeText();
+  fill(green); //ink
+  size = 50;
+  textFont(InkFree, size);
+  text(click, ssSpaceBarX, ssSpaceBarY, ssSpaceBarW, ssSpaceBarH);
+  //noFill();
+  fill(ResetInkColor);
+}
 //
 //End Text

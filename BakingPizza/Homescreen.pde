@@ -13,6 +13,7 @@ backgroundImage(); //see Images
 - see case study
 - note: 1 image must have aspect ratio
 */
+rect(HTxtBX, HTxtBY, HTxtBW, HTxtBH);
 } //end homescreen
 //
 //end Homescreen MAIN
