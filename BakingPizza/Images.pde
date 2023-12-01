@@ -16,7 +16,9 @@ image(backGroundImage, BackgroundX, BackgroundY, BackgroundW, BackgroundH);
 }//end BackgroundImage
 //
 void loadImagesSetup() {
-backGroundImage=loadImage("../ImagesUsed/Landscape and Square/ChefBoyRD.jpg");
+String Pathway = "../ImagesUsed/";
+String ChefImage = "Square and Landscape/ChefBoyRD.jpg";
+backGroundImage=loadImage(Pathway + ChefImage);
 } //end loadimages
 //
 //end images main
